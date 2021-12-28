@@ -34,4 +34,4 @@ build/
 
 ### Top Secrets ###
 src/main/resources/secure-connect.zip
-src/main/resources/application.yaml
+application.properties

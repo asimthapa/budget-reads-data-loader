@@ -24,16 +24,6 @@ public class BudgetReadsDataLoaderApplication {
 		SpringApplication.run(BudgetReadsDataLoaderApplication.class, args);
 	}
 
-	@PostConstruct
-	public void start() {
-		Author author = new Author();
-		author.setPersonalName("asim");
-		author.setName("asimPen");
-		author.setId("oax");
-		authorRepository.save(author);
-		System.out.println("Finished saving");
-	}
-
 	@Bean
 	public CqlSessionBuilderCustomizer sessionBuilderCustomizer(DataStaxAstraProperties astraProperties) {
 		Path bundle = astraProperties.getSecureConnectBundle().toPath();
